@@ -1,0 +1,13 @@
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\bin\Debug\TAXAS.exe.config
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\bin\Debug\TAXAS.exe
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\bin\Debug\TAXAS.pdb
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.csproj.AssemblyReference.cache
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.csproj.SuggestedBindingRedirects.cache
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Properties.Resources.resources
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.csproj.GenerateResource.cache
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.csproj.CoreCompileInputs.cache
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.exe
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.pdb
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Calculo.resources
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Abertura.resources
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Login.resources
