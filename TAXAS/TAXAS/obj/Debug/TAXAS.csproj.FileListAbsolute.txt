@@ -11,3 +11,9 @@ C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\T
 C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Calculo.resources
 C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Abertura.resources
 C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.Login.resources
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.AddCasa.resources
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.AddTerreno.resources
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\bin\Debug\itextsharp.dll
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\bin\Debug\itextsharp.xml
+C:\Users\Softale\Desktop\REPOSITORIOS\SOFTALE_2022\TAXAS\TAXAS\TAXAS\obj\Debug\TAXAS.csproj.CopyComplete

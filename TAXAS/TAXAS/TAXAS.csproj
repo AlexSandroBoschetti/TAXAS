@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +58,18 @@
     <Compile Include="Abertura.Designer.cs">
       <DependentUpon>Abertura.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCasa.Designer.cs">
+      <DependentUpon>AddCasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTerreno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTerreno.Designer.cs">
+      <DependentUpon>AddTerreno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +87,12 @@
     <EmbeddedResource Include="Abertura.resx">
       <DependentUpon>Abertura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddCasa.resx">
+      <DependentUpon>AddCasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTerreno.resx">
+      <DependentUpon>AddTerreno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calculo.resx">
       <DependentUpon>Calculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +109,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +128,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHAVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terreno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

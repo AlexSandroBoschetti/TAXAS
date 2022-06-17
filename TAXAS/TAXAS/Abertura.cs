@@ -20,8 +20,10 @@ namespace TAXAS
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Hide();
-            Login login = new Login();
-            login.Show();
+            // Login login = new Login();
+            //login.Show();
+            Calculo calculo = new Calculo();
+            calculo.Show();
             timer1.Stop();
 
         }
@@ -30,6 +32,11 @@ namespace TAXAS
         {
             
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

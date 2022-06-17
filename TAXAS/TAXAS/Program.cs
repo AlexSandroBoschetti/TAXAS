@@ -15,6 +15,8 @@ namespace TAXAS
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Abertura());
 
+
+
         }
     }
 }
