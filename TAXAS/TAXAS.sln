@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAXAS", "TAXAS\TAXAS.csproj", "{EC21BB6E-2539-4A88-AC4C-42729AF0F0FA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AutoTAXAS", "TAXAS\Instalador\AutoTAXAS\AutoTAXAS.vdproj", "{A7A1F00D-727C-4176-BDBA-02FBA83BE61D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{EC21BB6E-2539-4A88-AC4C-42729AF0F0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC21BB6E-2539-4A88-AC4C-42729AF0F0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC21BB6E-2539-4A88-AC4C-42729AF0F0FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A1F00D-727C-4176-BDBA-02FBA83BE61D}.Debug|Any CPU.ActiveCfg = Debug
+		{A7A1F00D-727C-4176-BDBA-02FBA83BE61D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

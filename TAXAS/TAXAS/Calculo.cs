@@ -1,30 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using iTextSharp.text;//ESTENSAO 1 (TEXT)
+using iTextSharp.text.pdf;//ESTENSAO 2 (PDF)
+using System;
 using System.Drawing.Printing;
-
 //ESSAS SAO AS BIBLIOTECAS QUE DEVEREMOS ADICIONAR EM NOSSO PROJETO
 using System.IO;// A BIBLIOTECA DE ENTRADA E SAIDA DE ARQUIVOS
-
-using iTextSharp;//E A BIBLIOTECA ITEXTSHARP E SUAS EXTENÇÕES
-using iTextSharp.text;//ESTENSAO 1 (TEXT)
-using iTextSharp.text.pdf;//ESTENSAO 2 (PDF)
+using System.Windows.Forms;
 
 namespace TAXAS
 {
     public partial class Calculo : Form
     {
-        
         public Calculo()
         {
             InitializeComponent();
-
         }
 
         private void cLIENTEToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,12 +84,12 @@ namespace TAXAS
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -112,15 +100,18 @@ namespace TAXAS
 
         private void imprimirDados_PrintPage(object sender, PrintPageEventArgs e)
         {
-            
-            
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+
             Document doc = new Document(PageSize.A4);
-            string caminho = Application.StartupPath + @"\TaxaDeOcupação.pdf";
+            string caminho = Application.StartupPath + @"\AutoTAXA.pdf";
             PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(caminho, FileMode.Create));
+
+
 
             try
             {
@@ -129,26 +120,74 @@ namespace TAXAS
                 doc.AddCreationDate();
                 doc.Open();
                 Paragraph par = new Paragraph();
-                par.Alignment = Element.ALIGN_JUSTIFIED;
-                par.Add("TAXA DE OCUPAÇÃO:\n");
-                par.Add("\n");
-                par.Add($"Cliente: {textBox3.Text}\n");
-                par.Add($"Endereço: {textBox4.Text}\n");
-                par.Add("\n");
-                par.Add($"O terreno tem {textBox1.Text} m².\n");
-                par.Add($"A casa tem {textBox2.Text} m².\n");
-                par.Add("\n");
+                par.Alignment = Element.ALIGN_CENTER;
 
-                double taxaOcupacao = (Convert.ToDouble(textBox2.Text) / Convert.ToDouble(textBox1.Text)) * 100;
-                par.Add($"A taxa de ocupação é: {taxaOcupacao.ToString("F2")} %.\n");
+                if (pictureBox2.Image != null)
+                {
 
-                par.Add("\n");
-                par.Add($"By Softale | 2022.\n");
-                par.Add(DateTime.Now.ToString());
 
-                doc.Add(par);
-                doc.Close();
-                System.Diagnostics.Process.Start(caminho);
+
+                    System.Drawing.Image image = pictureBox2.Image;
+                    iTextSharp.text.Image imagem2 = iTextSharp.text.Image.GetInstance(image, System.Drawing.Imaging.ImageFormat.Png);
+                    imagem2.ScaleToFit(150f, 150f);
+                    imagem2.Alignment = Element.ALIGN_JUSTIFIED;
+
+                    par.Add(imagem2);
+
+                    par.Add("\n");
+                    par.Add($"Cliente: {textBox3.Text}\n");
+                    par.Add($"Endereço: {textBox4.Text}\n");
+                    par.Add("\n");
+                    par.Add($"O terreno tem {textBox1.Text} m².\n");
+                    par.Add($"A casa tem {textBox2.Text} m².\n");
+                    par.Add("\n");
+
+                    double taxaOcupacao = (Convert.ToDouble(textBox2.Text) / Convert.ToDouble(textBox1.Text)) * 100;
+                    par.Add($"A taxa de ocupação é: {taxaOcupacao.ToString("F2")} %.\n");
+                    par.Add("\n");
+                    double taxaPermeabilidade = 100 - ((Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox6.Text) + Convert.ToDouble(textBox7.Text)) / Convert.ToDouble(textBox1.Text)) * 100;
+                    par.Add($"A taxa de Permeabilidade é: {taxaPermeabilidade.ToString("F2")} %.\n");
+                    par.Add("\n");
+                    double areaPermeabilidade = (taxaPermeabilidade / 100) * Convert.ToDouble(textBox1.Text);
+                    par.Add($"A área de Permeabilidade é: {areaPermeabilidade.ToString("F2")} m².\n");
+                    par.Add("\n");
+                    double coeficienteAprovetamento = Convert.ToDouble(textBox2.Text) / Convert.ToDouble(textBox1.Text);
+                    par.Add($"O índice de aproveitamento é: {coeficienteAprovetamento.ToString("F2")} %.\n");
+                    par.Add("\n");
+                    par.Add($"{textBox8.Text}\n");
+                    par.Add("\n");
+                    par.Add(DateTime.Now.ToString());
+
+                    doc.Add(par);
+                    doc.Close();
+                    System.Diagnostics.Process.Start(caminho);
+                } else
+                {
+                    par.Add($"Cliente: {textBox3.Text}\n");
+                    par.Add($"Endereço: {textBox4.Text}\n");
+                    par.Add("\n");
+                    par.Add($"O terreno tem {textBox1.Text} m².\n");
+                    par.Add($"A casa tem {textBox2.Text} m².\n");
+                    par.Add("\n");
+
+                    double taxaOcupacao = (Convert.ToDouble(textBox2.Text) / Convert.ToDouble(textBox1.Text)) * 100;
+                    par.Add($"A taxa de ocupação é: {taxaOcupacao.ToString("F2")} %.\n");
+                    par.Add("\n");
+
+                    double taxaPermeabilidade = ((Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox6.Text) + Convert.ToDouble(textBox7.Text)) / Convert.ToDouble(textBox1.Text)) * 100;
+                    par.Add($"A taxa de Permeabilidade é: {taxaPermeabilidade.ToString("F2")} %.\n");
+                    par.Add("\n");
+                    double coeficienteAprovetamento = Convert.ToDouble(textBox2.Text) / Convert.ToDouble(textBox1.Text);
+                    par.Add($"O índice de aproveitamento é: {coeficienteAprovetamento.ToString("F2")} %.\n");
+                    par.Add("\n");
+                    par.Add($"{textBox8.Text}\n");
+                    par.Add("\n");
+                    par.Add(DateTime.Now.ToString());
+
+                    doc.Add(par);
+                    doc.Close();
+                    System.Diagnostics.Process.Start(caminho);
+                }
             }
             catch (Exception Ex)
             {
@@ -159,12 +198,43 @@ namespace TAXAS
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            
+
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Title = "Carregar imagem";
+                dlg.Filter = "jpg files (*.jpg)|*.jpg";
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox2.Image = System.Drawing.Image.FromFile(dlg.FileName);
+
+                }
+                dlg.Dispose();
+            }
+            else
+            {
+                pictureBox2.Image = null;
+            }
+        }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
     }
 }
