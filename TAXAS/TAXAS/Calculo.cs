@@ -174,8 +174,11 @@ namespace TAXAS
                     par.Add($"A taxa de ocupação é: {taxaOcupacao.ToString("F2")} %.\n");
                     par.Add("\n");
 
-                    double taxaPermeabilidade = ((Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox6.Text) + Convert.ToDouble(textBox7.Text)) / Convert.ToDouble(textBox1.Text)) * 100;
+                    double taxaPermeabilidade = 100 - ((Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox6.Text) + Convert.ToDouble(textBox7.Text)) / Convert.ToDouble(textBox1.Text)) * 100;
                     par.Add($"A taxa de Permeabilidade é: {taxaPermeabilidade.ToString("F2")} %.\n");
+                    par.Add("\n");
+                    double areaPermeabilidade = (taxaPermeabilidade / 100) * Convert.ToDouble(textBox1.Text);
+                    par.Add($"A área de Permeabilidade é: {areaPermeabilidade.ToString("F2")} m².\n");
                     par.Add("\n");
                     double coeficienteAprovetamento = Convert.ToDouble(textBox2.Text) / Convert.ToDouble(textBox1.Text);
                     par.Add($"O índice de aproveitamento é: {coeficienteAprovetamento.ToString("F2")} %.\n");
